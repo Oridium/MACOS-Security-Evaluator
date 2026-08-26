@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "secureops-macos-audit"
+version = "0.1.0"
+description = "Read-only macOS security configuration audit tool"
+requires-python = ">=3.9"
+authors = [{name = "SecureOps"}]
+license = {text = "MIT"}
+keywords = ["macos", "security", "audit", "cybersecurity", "defensive-security"]
+
+[project.scripts]
+secureops-audit = "secureops_audit.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["secureops_audit*"]
